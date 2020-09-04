@@ -1,0 +1,65 @@
+import java.util.Scanner;
+public class fonte {
+
+    public static void main(String[] args)
+    {
+        System.out.println("Escolha o primeiro número e em seguida o segundo (aperte enter a cada escolha):");
+        Scanner entrada= new Scanner(System.in);
+        int num1,num2;
+        num1 = entrada.nextInt();
+        num2 = entrada.nextInt();
+        System.out.println("Qual Operação realizar: 1 para adição, 2 para subtração, 3 para multiplicação, 4 for para divisão e 5 para potência:");
+        int escolha;
+        escolha = entrada.nextInt();
+        switch (escolha){
+        case 1:
+            System.out.println(add( num1,num2));
+            break;
+        case 2:
+            System.out.println(sub( num1,num2));
+            break;      
+        case 3:
+            System.out.println(mult( num1,num2));
+            break;
+        case 4:
+            System.out.println(div( num1,num2));
+            break;
+        case 5:
+            System.out.println(Math.pow(num1,num2));
+            break;
+            default:
+                System.out.println("Erro de operação invalida");
+
+
+        }
+
+
+
+    }
+    public static int add(int x, int y)
+    {
+        int result = x + y;
+        return result;
+    }
+    public static int sub(int x, int y)
+    {
+        int result = x-y;
+        return result;
+    }
+    public static int mult(int x, int y)
+    {
+        int result = x*y;
+        return result;
+    }
+    public static int div(int x, int y)
+    {
+        int result = x/y;
+        return result;
+    }
+    public static int pow(int x, int y)
+    {
+        int result = x^y;
+        return result;
+    }
+
+}
